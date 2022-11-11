@@ -1,0 +1,62 @@
+{
+  "root": true,
+  "parser": "@babel/eslint-parser",
+  "extends": [
+    "airbnb",
+    "plugin:react/jsx-runtime"
+  ],
+  "parserOptions": {
+    "requireConfigFile": false,
+    "ecmaVersion": 8,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jquery": true,
+    "mocha": true
+  },
+  "globals": {
+    "app": true,
+    "io": true,
+    "Promise": true,
+    "Paginate": true,
+    "Upload": true,
+    "Utils": true,
+    "i18n": true,
+    "Cloud": true,
+    "Crontab": true,
+    "VSError": true,
+    "Filter": true,
+    "ABS_PATH": true,
+    "APP_PATH": true,
+    "CORE_PATH": true,
+    "PUBLIC_PATH": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "extensions": [".js", ".vue", ".jsx"],
+        "map": [
+          ["@client", "./client"],
+          ["@cms", "./cms"]
+        ]
+      }
+    },
+    "react": {
+      "version": "999.999.999"
+    }
+  },
+  "rules": {
+    "arrow-body-style": [0],
+    "comma-dangle": [0],
+    "guard-for-in": [0],
+    "no-console": [0],
+    "no-underscore-dangle": [0],
+    "no-throw-literal": [0],
+    "no-unneeded-ternary": [0],
+    "padded-blocks": [0],
+    "space-in-parens": [0]
+  }
+}
