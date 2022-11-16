@@ -25,7 +25,6 @@ npm-debug.log
 .DS_Store
 Thumbs.db
 *.env
-*.dev
 .DS_Store
 *.lock
 *.identifier

@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  vulkano_zero_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+      - "8082:8082"
+      - "9229:9229"
+    volumes:
+      - .:/home/app
+    environment:
+      NODE_ENV: development
+    command: sh -c "npm install && npm run dev"

@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  vulkano_zero:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "8082:8082"

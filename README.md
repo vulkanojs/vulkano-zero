@@ -36,6 +36,10 @@ Vulkano Zero is a small, simple, and fast framework for creating web application
 | `npm run deploy:pi`             | Deploy to Raspberry Pi via PM2            |
 
 
+## Usage with Docker
+- Run `docker compose -f "docker-compose-prod.yml" up -d --build` to execute the production configuration.
+- Run `docker compose up` to execute the development configuration, watch for changes, etc.
+
 ## Project Structure
 
 - `app/` - Your backend application, this is where you work.
