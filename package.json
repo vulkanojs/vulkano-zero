@@ -1,10 +1,10 @@
 {
   "name": "vulkano",
-  "version": "1.18.0",
+  "version": "1.20.0",
   "description": "A MVC framework using Express 4",
   "license": "MIT",
   "engines": {
-    "node": "^16 || ^18"
+    "node": "^20"
   },
   "main": "app.js",
   "scripts": {

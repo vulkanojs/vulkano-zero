@@ -16,7 +16,7 @@ Vulkano Zero is a small, simple, and fast framework for creating web application
 ### System Requirements
 
 - Unix
-- Node.js v18+
+- Node.js v20+
 
 ## Quick start
 
