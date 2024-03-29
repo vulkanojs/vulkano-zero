@@ -3,25 +3,25 @@
   "script": "app.js",
   "max_memory_restart": "512M",
   "exec_mode" : "cluster",
-  "env_pi": {
+  "env_production": {
     "NODE_ENV": "production",
-    "PORT": "8082"
+    "PORT": "8080"
   },
   "deploy": {
-    "pi": {
-      "user": "pi",
+    "production": {
+      "user": "root",
       "port": "22",
       "host": ["127.0.0.1"],
       "ref": "origin/master",
       "repo": "git@github.com:vulkanojs/vulkano-zero.git",
-      "path": "/home/pi/pm2-sites/vulkano-zero",
+      "path": "/home/user/pm2-sites/vulkano-zero",
       "post-deploy": "npm install --omit=dev && pm2 startOrRestart ecosystem.config.json --env production --only vulkano && pm2 save",
       "instances" : "max",
       "exec_mode" : "cluster",
-      "interpreter": "/usr/local/n/versions/node/18.12.1/bin/node",
+      "interpreter": "/usr/local/n/versions/node/20.12.0/bin/node",
       "env": {
         "NODE_ENV": "production",
-        "PORT": "8082"
+        "PORT": "8080"
       }
     }
   }

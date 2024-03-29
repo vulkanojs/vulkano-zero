@@ -1,10 +1,10 @@
-FROM node:18
+FROM node:20
 
 RUN mkdir -p /home/app
 COPY . /home/app
 WORKDIR /home/app
 RUN npm install --omit=dev
 
-EXPOSE 8082
+EXPOSE 8080
 
 CMD ["node", "/home/app/app.js"]
