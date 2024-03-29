@@ -23,7 +23,7 @@ export class VulkanoWebcomponent extends LitElement {
   }
 
   render() {
-    return html`<p>You can use vulkano-webcomponent to have ${this.name}!</p>`;
+    return html`<p>Bonus: You can use vulkano-webcomponent to have ${this.name}!</p>`;
   }
 }
 

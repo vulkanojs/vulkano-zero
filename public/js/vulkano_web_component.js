@@ -3184,7 +3184,7 @@ var VulkanoWebcomponent = /*#__PURE__*/function (_LitElement) {
   _createClass(VulkanoWebcomponent, [{
     key: "render",
     value: function render() {
-      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["<p>You can use vulkano-webcomponent to have ", "!</p>"])), this.name);
+      return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["<p>Bonus: You can use vulkano-webcomponent to have ", "!</p>"])), this.name);
     }
   }]);
   return VulkanoWebcomponent;
