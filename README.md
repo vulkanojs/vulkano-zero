@@ -33,7 +33,6 @@ Vulkano Zero is a small, simple, and fast framework for creating web application
 | `npm run start`                 | Start server                              |
 | `npm run webpack`               | Start webpack (js, sass, and  browsersync)|
 | `npm run build`                 | Task to buils assets in production mode   |
-| `npm run deploy:pi`             | Deploy to Raspberry Pi via PM2            |
 
 
 ## Usage with Docker
@@ -42,7 +41,7 @@ Vulkano Zero is a small, simple, and fast framework for creating web application
 
 ## Project Structure
 
-- `app/` - Your backend application, this is where you work.
+- `app/` - Your backend application
 - `client/` - Your JS and CSS sources
 - `core/` - Vulkano Zero heart (hack it if you want)
 - `public/` - HTTP Public folder. Compiled assets goes here too.

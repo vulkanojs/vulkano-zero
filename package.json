@@ -11,7 +11,6 @@
     "dev": "node ./node_modules/concurrently/dist/bin/concurrently -n VULKANO,WEPBACK -c green,cyan './node_modules/nodemon/bin/nodemon.js --inspect' 'npm run webpack'",
     "start": "node app.js",
     "build": "NODE_ENV=production webpack",
-    "deploy:pi": "pm2 deploy ecosystem.config.json pi",
     "webpack": "webpack --watch"
   },
   "dependencies": {
