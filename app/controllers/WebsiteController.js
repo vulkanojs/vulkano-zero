@@ -9,8 +9,7 @@ module.exports = {
       page: 'dashboard',
       title: 'Zero :: Vulkano'
     };
-    res.render('website/dashboard.njk', data);
-
+    res.render('website/index.njk', data);
   }
 
 };

@@ -1,15 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const pk = require('./package.json');
 
 const env = String(process.env.NODE_ENV || 'development').toLowerCase();
 const version = String(pk.version) || '0.0.1';
 
-// Babel Loader
-const useBabelLoader = {
+const babelLoader = {
   test: /\.js$/,
   exclude: /(node_modules)/,
   use: {
@@ -27,42 +27,40 @@ const useBabelLoader = {
   }
 };
 
-// SASS Loader
-const useSassLoader = {
-  test: /\.s[ac]ss$/i,
+const styleLoader = {
+  test: /\.(s(a|c)ss)$/,
   use: [
     MiniCssExtractPlugin.loader,
-    'css-loader',
-    'sass-loader',
+    {
+      loader: 'css-loader',
+      options: { url: false }
+    },
+    'sass-loader'
   ]
 };
 
-// SASS plugin
-const sassPlugin = new MiniCssExtractPlugin({
-  filename: 'css/[name].css',
-});
-
-// Enviroment Plugin
 const pluginEnvironment = new webpack.EnvironmentPlugin({
   NODE_ENV: env,
   VERSION: version
 });
 
-// ESLint Options
 const pluginDefineESLint = new ESLintPlugin({
   failOnWarning: false,
   failOnError: false
 });
 
-// BrowserSync
 const pluginBrowserSync = new BrowserSyncPlugin({
   host: 'localhost',
   port: 3000,
   proxy: 'localhost:8082'
 });
 
+const pluginMiniCssExtract = new MiniCssExtractPlugin({
+  filename: 'css/[name].css'
+});
+
 const config = {
-  mode: String(process.env.NODE_ENV || 'development').toLowerCase(),
+  mode: env,
   stats: {
     colors: true,
     env: true,
@@ -70,15 +68,16 @@ const config = {
   },
   module: {
     rules: [
-      useBabelLoader,
-      useSassLoader
+      babelLoader,
+      styleLoader
     ]
   },
   entry: {
-    app: ['./client/index.js', './client/app.scss']
+    app: ['./client/index.js', './client/app.scss'],
+    vulkano_web_component: './client/components/vulkano-webcomponent/index.js',
   },
   output: {
-    path: path.resolve(process.cwd(), './public/dist/'),
+    path: path.resolve(process.cwd(), './public/'),
     filename: 'js/[name].js'
   },
   resolve: {
@@ -96,8 +95,8 @@ const config = {
   plugins: [
     pluginEnvironment,
     pluginDefineESLint,
-    sassPlugin,
-    pluginBrowserSync
+    pluginBrowserSync,
+    pluginMiniCssExtract
   ]
 };
 

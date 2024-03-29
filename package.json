@@ -55,6 +55,7 @@
     "js-datepicker": "^5.18.0",
     "jsonapi-serializer": "^3.6.7",
     "jwt-simple": "^0.5.6",
+    "lit": "^3.1.2",
     "lodash": "^4.17.21",
     "mime": "^3.0.0",
     "mini-css-extract-plugin": "^2.6.1",

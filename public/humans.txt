@@ -1,6 +1,6 @@
 /* humanstxt.org */
 
-/* TEAM */
+/* VULKANO TEAM */
 Jose Paternina
 @josedaniel
 
