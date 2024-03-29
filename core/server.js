@@ -63,7 +63,7 @@ module.exports = {
     const expressDefaultConfig = {
       timeout: 120000,
       poweredBy: false,
-      port: process.env.PORT || expressUserPort || expressSettingsPort || 8082,
+      port: process.env.PORT || expressUserPort || expressSettingsPort || 8080,
       cors: {},
       cookies: {},
       jwt: {},

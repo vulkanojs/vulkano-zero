@@ -52,7 +52,7 @@ const pluginDefineESLint = new ESLintPlugin({
 const pluginBrowserSync = new BrowserSyncPlugin({
   host: 'localhost',
   port: 3000,
-  proxy: 'localhost:8082'
+  proxy: 'localhost:8080'
 });
 
 const pluginMiniCssExtract = new MiniCssExtractPlugin({

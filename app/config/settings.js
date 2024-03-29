@@ -17,7 +17,7 @@ module.exports = {
   host: process.env.HOST || 'api.production.dev',
 
   // Port
-  port: process.env.PORT || 8082,
+  port: process.env.PORT || 8080,
 
   // Connection to Database
   database: {
