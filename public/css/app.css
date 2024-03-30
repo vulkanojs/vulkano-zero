@@ -959,7 +959,7 @@ select:not([multiple]) {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  background-color: white;
 }
 body .zero-container {
   padding: 20px;
