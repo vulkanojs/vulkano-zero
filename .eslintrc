@@ -38,7 +38,7 @@
       "alias": {
         "extensions": [".js"],
         "map": [
-          ["@client", "./client"],
+          ["@client", "./client"]
         ]
       }
     },
