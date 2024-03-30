@@ -2,8 +2,7 @@
   "root": true,
   "parser": "@babel/eslint-parser",
   "extends": [
-    "airbnb",
-    "plugin:react/jsx-runtime"
+    "airbnb"
   ],
   "parserOptions": {
     "requireConfigFile": false,
@@ -37,10 +36,9 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "extensions": [".js", ".vue", ".jsx"],
+        "extensions": [".js"],
         "map": [
           ["@client", "./client"],
-          ["@cms", "./cms"]
         ]
       }
     },
