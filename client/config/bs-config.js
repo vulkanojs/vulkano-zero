@@ -40,7 +40,7 @@ module.exports = {
       toggles: true
     }
   },
-  logLevel: 'info',
+  logLevel: 'silent',
   logPrefix: 'Browsersync',
   logConnections: false,
   logFileChanges: true,

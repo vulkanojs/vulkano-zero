@@ -584,7 +584,7 @@
     // }
     static styles = i`p {
     color: black;
-    border: 1px solid #999;
+    border: 1px solid #333;
     padding: 5px;
   }`;
     static properties = {
@@ -595,7 +595,7 @@
       this.name = "native webcomponents";
     }
     render() {
-      return x`<p>Bonus: You can use vulkano-webcomponent to have ${this.name}!</p>`;
+      return x`<p>Bonus! You can use vulkano-webcomponent to have ${this.name}!</p>`;
     }
   };
   customElements.define("vulkano-webcomponent", VulkanoWebcomponent);

@@ -9,7 +9,7 @@ export class VulkanoWebcomponent extends LitElement {
 
   static styles = css`p {
     color: black;
-    border: 1px solid #999;
+    border: 1px solid #333;
     padding: 5px;
   }`;
 
@@ -23,7 +23,7 @@ export class VulkanoWebcomponent extends LitElement {
   }
 
   render() {
-    return html`<p>Bonus: You can use vulkano-webcomponent to have ${this.name}!</p>`;
+    return html`<p>Bonus! You can use vulkano-webcomponent to have ${this.name}!</p>`;
   }
 }
 

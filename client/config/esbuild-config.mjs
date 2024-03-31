@@ -1,6 +1,6 @@
 /* eslint-disable prefer-const */
 import * as esbuild from 'esbuild';
-import {sassPlugin} from 'esbuild-sass-plugin';
+import { sassPlugin } from 'esbuild-sass-plugin';
 
 // client/main.js
 let main_js = await esbuild.context({
@@ -29,4 +29,4 @@ let style = await esbuild.context({
 });
 await style.watch();
 
-console.log('Watching for changes...');
+console.log('[esbuild] Watching for changes...');
