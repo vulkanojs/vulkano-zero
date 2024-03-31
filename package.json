@@ -8,8 +8,9 @@
   },
   "main": "app.js",
   "scripts": {
-    "dev": "node ./node_modules/concurrently/dist/bin/concurrently -n VULKANO -c green './node_modules/nodemon/bin/nodemon.js --inspect'",
+    "dev": "node ./node_modules/concurrently/dist/bin/concurrently -n NODEMON,ESBUILD,BRWSRSYNC -c green,cyan,yellow 'yarn nodemon' 'yarn esbuild' 'yarn browsersync'",
     "start": "node app.js",
+    "nodemon": "./node_modules/nodemon/bin/nodemon.js --inspect",
     "browsersync": "./node_modules/browser-sync/dist/bin.js start --config 'client/config/bs-config.js'",
     "esbuild": "node client/config/esbuild-config.mjs"
   },
