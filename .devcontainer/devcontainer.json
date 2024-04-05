@@ -36,7 +36,8 @@
 				"ronnidc.nunjucks",
 				"meganrogge.template-string-converter",
 				"Postman.postman-for-vscode",
-        "editorconfig.editorconfig"
+        "editorconfig.editorconfig",
+        "runem.lit-plugin"
 			]
 		}
 	},

@@ -1,3 +1,4 @@
+"use strict";
 (() => {
   // node_modules/@lit/reactive-element/css-tag.js
   var t = globalThis;
@@ -592,10 +593,13 @@
     };
     constructor() {
       super();
-      this.name = "native webcomponents";
+      this.name = "webcomponent";
     }
     render() {
-      return x`<p>Bonus! You can use vulkano-webcomponent to have ${this.name}!</p>`;
+      return x`<p>
+      This is a ${this.name} written in plain JS! <br>
+      You can edit this in client/components/vulkano-webcomponent/main.js.
+    </p>`;
     }
   };
   customElements.define("vulkano-webcomponent", VulkanoWebcomponent);
@@ -637,3 +641,4 @@ lit-html/is-server.js:
    * SPDX-License-Identifier: BSD-3-Clause
    *)
 */
+//# sourceMappingURL=vulkano-webcomponent.js.map

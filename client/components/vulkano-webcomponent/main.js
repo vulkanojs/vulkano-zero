@@ -19,11 +19,14 @@ export class VulkanoWebcomponent extends LitElement {
 
   constructor() {
     super();
-    this.name = 'native webcomponents';
+    this.name = 'webcomponent';
   }
 
   render() {
-    return html`<p>Bonus! You can use vulkano-webcomponent to have ${this.name}!</p>`;
+    return html`<p>
+      This is a ${this.name} written in plain JS! <br>
+      You can edit this in client/components/vulkano-webcomponent/main.js.
+    </p>`;
   }
 }
 

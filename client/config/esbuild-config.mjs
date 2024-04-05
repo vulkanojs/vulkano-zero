@@ -2,6 +2,7 @@
 import * as esbuild from 'esbuild';
 import { sassPlugin } from 'esbuild-sass-plugin';
 import eslint from 'esbuild-plugin-eslint';
+import esbuildPluginTsc from 'esbuild-plugin-tsc';
 
 // client/main.js
 let main_js = await esbuild.context({
@@ -28,6 +29,19 @@ let vulkano_webcomponent = await esbuild.context({
   ]
 });
 await vulkano_webcomponent.watch();
+
+// client/components/simple-greeting/main.ts
+let ts_component = await esbuild.context({
+  entryPoints: ['client/components/simple-greeting/main.ts'],
+  bundle: true,
+  outfile: 'public/js/simple-greeting.js',
+  logLevel: 'warning',
+  sourcemap: true,
+  plugins: [
+    esbuildPluginTsc({ force: true })
+  ]
+});
+await ts_component.watch();
 
 // client/style.scss
 let style = await esbuild.context({
