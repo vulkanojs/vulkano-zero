@@ -9,10 +9,12 @@
   "main": "app.js",
   "scripts": {
     "dev": "node ./node_modules/concurrently/dist/bin/concurrently -c green,cyan,yellow 'yarn nodemon' 'yarn esbuild' 'yarn browsersync'",
+    "dev:fe": "node ./node_modules/concurrently/dist/bin/concurrently -n esbuild,browsersync -c green,cyan 'yarn esbuild' 'yarn browsersync'",
     "start": "node app.js",
     "nodemon": "./node_modules/nodemon/bin/nodemon.js --inspect",
     "browsersync": "./node_modules/browser-sync/dist/bin.js start --config 'client/config/bs-config.js'",
-    "esbuild": "node client/config/esbuild-config.mjs"
+    "esbuild": "node client/config/esbuild-config.mjs",
+    "rm:node_modules": "rm -rf node_modules/* node_modules/.*"
   },
   "dependencies": {
     "bluebird": "^3.7.2",
