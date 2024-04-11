@@ -6,12 +6,8 @@
  * For example:
  *   => `npm run start`
  *   => `node app.js`
- *   => `nodemon`
- *   => `forever start app.js`
- *   => `node debug app.js`
- *   => `pm2 start pm2.json`
  */
 
-global.START_TIME = new Date();
+const vulkano = require('@vulkano/core');
 
-require('./core/bootstrap')();
+vulkano();
