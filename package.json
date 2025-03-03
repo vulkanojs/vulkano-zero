@@ -17,7 +17,7 @@
     "rm:node_modules": "rm -rf node_modules/* node_modules/.*"
   },
   "dependencies": {
-    "@vulkano/core": "^1.1.0",
+    "@vulkano/core": "^1.14.1",
     "bluebird": "^3.7.2",
     "esbuild": "^0.20.2",
     "esbuild-plugin-eslint": "^0.3.12",
