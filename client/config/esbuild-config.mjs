@@ -48,10 +48,10 @@ let style = await esbuild.context({
   entryPoints: ['client/style.scss'],
   bundle: false,
   outfile: 'public/css/style.css',
-  logLevel: 'warning',
+  logLevel: 'error',
   sourcemap: true,
   plugins: [sassPlugin({
-    loadPaths: ['node_modules/foundation-sites/scss'],
+    loadPaths: ['node_modules/foundation-sites/scss', 'node_modules/motion-ui/src'],
     embedded: true
   })]
 });
